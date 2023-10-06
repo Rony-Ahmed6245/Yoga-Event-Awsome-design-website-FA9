@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.flower-bg{
+    background-image: url('https://i.ibb.co/tJ6fRKZ/images.jpg');
+    background-repeat: no-repeat;
+    background-position: top right;
+
+}
