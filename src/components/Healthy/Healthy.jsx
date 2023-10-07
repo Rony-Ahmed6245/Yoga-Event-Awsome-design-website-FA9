@@ -1,6 +1,7 @@
 
 
 const Healthy = () => {
+
     return (
         <div className="bg-none flower-bg lg:bg-[url('https://i.ibb.co/tJ6fRKZ/images.jpg')]   w-full ">
             <div className="max-w-7xl mx-auto my-10 px-3 md:px-2 lg:0">
@@ -13,10 +14,10 @@ const Healthy = () => {
                         <p className="text-lg text-gray-500 mt-5">Pellentesque aliquet sed magna consequat venenatis. Ut fermentum viverra <br />  porta. Nullam dui odio, tempus ut porttitor non, dignissim vel felis. Vestibulum convallis eu eros sit amet</p>
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-5 gap-10 -z-10 mt-10">
-                        <div className="  rounded-lg px-14 py-10 text-white md:col-span-2 ">
+                        <div className="  rounded-lg md:px-14 py-10 text-white md:col-span-2 ">
 
                             <div className="h-96 border  md:-mr-44 carousel carousel-vertical rounded-box">
-                                
+
                                 <div className="carousel-item h-full ">
                                     {/* <img src={'https://i.ibb.co/L5vhJxH/pdt1-600x.webp'} /> */}
                                     <div className="card card-compact bg-[#F4F4F4]  shadow-xl">
