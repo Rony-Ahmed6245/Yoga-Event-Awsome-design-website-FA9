@@ -10,7 +10,7 @@ const ContactUs = () => {
                 <div>
                     <h1 className="text-center text-xl font-medium text-base py-10">Map is Loading..</h1>
                 </div>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-5 md:px-4 lg:px-2 px-2">
                     <div className="border p-4 text-start">
                         <div className="text-4xl">
                             <BsFillTelephoneFill></BsFillTelephoneFill>
@@ -36,23 +36,24 @@ const ContactUs = () => {
                 {/* form  */}
                 <div className="">
 
-                        <form className="card-body px-4 md:px-96">
+                    <form className="card-body px-4 md:px-96">
                         <div className="form-control">
-                                <input type="text" placeholder="Name" className="input input-bordered rounded-full" required />
-                            </div>
-                            <div className="form-control">
-                                <input type="email" placeholder="Email" className="input input-bordered rounded-full my-4" required />
-                            </div>
-                            <div className="form-control">
-                                <input type="text" placeholder="Phone" className="input input-bordered rounded-full" required />   
-                            </div>
-                            <div className="form-control">
-                               <textarea name="text" className="border outline-none rounded-lg p-4 " placeholder="Massage....."  id="" cols="30" rows="10"></textarea>
-                            </div>
-                            <div className="form-control mt-6 ">
-                                <button className="btn rounded-full bg-[#DC2C5C] text-white hover:text-black">Login</button>
-                            </div>
-                        </form>
+                            <input type="text" placeholder="Name" className="input input-bordered rounded-full" required />
+                        </div>
+                        <div className="form-control">
+                            <input type="email" placeholder="Email" className="input input-bordered rounded-full my-4" required />
+                        </div>
+                        <div className="form-control">
+                            <input type="text" placeholder="Phone" className="input input-bordered rounded-full" required />
+                        </div>
+                        <div className="form-control">
+                            <textarea name="text" className="border outline-none rounded-lg p-4 " placeholder="Massage....." id="" cols="30" rows="10"></textarea>
+                        </div>
+
+                    </form>
+                    <div className="form-control mb-6 flex  items-center">
+                        <button className="btn w-32 rounded-full bg-[#DC2C5C] text-white hover:text-black">Sand</button>
+                    </div>
                 </div>
 
 

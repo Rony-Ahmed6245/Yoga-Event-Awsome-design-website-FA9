@@ -63,7 +63,7 @@ const Navbar = () => {
                         <img className="w-[150px] md:w-[200px]" src={'https://i.ibb.co/cgSdsT0/logo-1-300x300.webp'} alt="" />
                         <div className="">
                             <div className="dropdown">
-                                <label tabIndex={1} className="btn btn-ghost md:hidden">
+                                <label tabIndex={1} className="btn btn-ghost lg:hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-[40px] text-white w-[30px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
                                 <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-4 border z-[10]  rounded-box  -left-20 ">
@@ -76,8 +76,8 @@ const Navbar = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="navbar-center hidden md:flex">
-                            <ul className=" menu-horizontal px-4 gap-5  text-white font-bold">
+                        <div className="navbar-center hidden lg:flex">
+                            <ul className=" menu-horizontal px-4 gap-2 lg:gap-5  text-white font-medium md:font-bold">
                                 <li className="">{home}</li>
                                 <li className="">{shop}</li>
                                 <li>{blog}</li>
@@ -86,8 +86,8 @@ const Navbar = () => {
                                 <li>{faq}</li>
 
                             </ul>
-                            <button className="btn bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                login
+                            <button className="btn-sm rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                Login
                             </button>
                         </div>
                     </div>
