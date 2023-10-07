@@ -8,31 +8,47 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans" : "bgTrans"
         }
     >
-        Home
+        HOME
     </NavLink>;
-    const services = <NavLink
-        to="/services"
-        className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  text-red-400 border-b px-2 py-1 rounded-lg font-bold " : ""
-        }
-    >
-        Services
-    </NavLink>;
-    const products = <NavLink
-        to="/products"
-        className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "  text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
-        }
-    >
-        Product
-    </NavLink>;
+    const shop = <NavLink
+    to="/shop"
+    className={({ isActive, isPending }) =>
+        isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans" : "bgTrans"
+    }
+>
+    SHOP
+</NavLink>;
     const blog = <NavLink
         to="/blog"
         className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
         }
     >
-        Blog
+        BLOG
+    </NavLink>;
+    const aboutUs = <NavLink
+        to="/aboutus"
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
+        }
+    >
+        ABOUT US
+    </NavLink>;
+    const contactUs = <NavLink
+        to="/contactus"
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
+        }
+    >
+        CONTACT US
+    </NavLink>;
+    const faq = <NavLink
+        to="/faq"
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
+        }
+    >
+        FAQ'S
     </NavLink>;
 
 
@@ -50,23 +66,27 @@ const Navbar = () => {
                                 <label tabIndex={1} className="btn btn-ghost md:hidden">
                                     <svg xmlns="http://www.w3.org/2000/svg" className="h-[40px] text-white w-[30px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
-                                <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white px-3 py-3 border z-[10]  rounded-box  -left-10 ">
-                                    <li className="text-4xl">{home}</li>
-                                    <li className=" text-4xl">{services}</li>
-                                    <li className="text-4xl">{products}</li>
-                                    <li className="text-4xl">{blog}</li>
+                                <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-4 border z-[10]  rounded-box  -left-20 ">
+                                    <li className="text-4xl px-3">{home}</li>
+                                    <li className="text-4xl px-3">{shop}</li>
+                                    <li className="text-4xl px-3">{blog}</li>
+                                    <li className="text-4xl px-3">{aboutUs}</li>
+                                    <li className="text-4xl px-3">{contactUs}</li>
+                                    <li className="text-4xl px-3">{faq}</li>
                                 </ul>
                             </div>
                         </div>
                         <div className="navbar-center hidden md:flex">
-                            <ul className=" menu-horizontal px-4 gap-10 md:mr-10  lg:mr-24 text-white font-bold">
+                            <ul className=" menu-horizontal px-4 gap-5  text-white font-bold">
                                 <li className="">{home}</li>
-                                <li>{services}</li>
-                                <li>{products}</li>
+                                <li className="">{shop}</li>
                                 <li>{blog}</li>
+                                <li>{aboutUs}</li>
+                                <li>{contactUs}</li>
+                                <li>{faq}</li>
 
                             </ul>
-                            <button className="btn btn-primary md:ml-20 lg:ml-32">
+                            <button className="btn bg-white text-gray-500 md:ml-4 lg:ml-6">
                                 login
                             </button>
                         </div>

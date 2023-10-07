@@ -10,8 +10,8 @@ const Subscribe = () => {
                         <h1 className="text-4xl font-bold">SUBSCRIBE US</h1>
                     </div>
                     <div className="flex justify-center md:justify-end items-center col-span-4 jus">
-                        <input className="py-4 pr-12 md:pr-24 lg:pr-96 px-4 rounded-l-full " placeholder="Your Email Address" type="text" />
-                        <button className="bg-white px-4 py-4 border-l-2 font-semibold rounded-r-full">Submit</button>
+                        <input className="py-4 pr-8 md:pr-24 lg:pr-96 px-2 rounded-l-full " placeholder="Your Email Address" type="text" />
+                        <button className="bg-white px-2 py-4 border-l-2 font-semibold rounded-r-full">SUBSCRIBE</button>
                     </div>
                 </div>
             </div>
