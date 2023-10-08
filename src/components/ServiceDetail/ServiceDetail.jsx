@@ -12,8 +12,8 @@ const ServiceDetail = () => {
 
     return (
         <div className='max-w-7xl mx-auto my-5 px-4'>
-            <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img src={img}alt="Album" /></figure>
+            <div className="card lg:card-side bg-base-100 shadow-xl md:my-32 ">
+                <figure><img className=' h-full' src={img}alt="Album" /></figure>
                 <div className="card-body">
                     <h2 className="card-title text-3xl font-bold text-gray-500">{title}</h2>
                     <p className='text-lg font-semibold text-gray-400 '>{long_dsc}</p>

@@ -15,10 +15,12 @@ const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
+    const [loading, setloading] = useState(true)
+
 
     // register part
-    const createUser = (email, password, displayName) => {
-        return createUserWithEmailAndPassword(auth, email, password, displayName)
+    const createUser = (email, password) => {
+        return createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 console.log(result);
             })
@@ -29,14 +31,17 @@ const AuthProvider = ({ children }) => {
 
     // logIn 
     const logIn = (email, password) =>{
-        return signInWithEmailAndPassword(auth, email, password)
+        setloading(true)
+        return signInWithEmailAndPassword(auth, email, password);
+        
     }
 
     // user manage with observer
     useEffect(() => {
         const unSubscribe = onAuthStateChanged(auth, currentUser => {
-            console.log('user', currentUser, user);
+            // console.log('user', currentUser, user);
             setUser(currentUser);
+            setloading(false)
         });
         return () => {
             unSubscribe();
@@ -46,6 +51,7 @@ const AuthProvider = ({ children }) => {
 
     // logout 
     const logOut =()=>{
+        setloading(true)
         return signOut(auth)
         .then(result => {
             console.log(result);
@@ -63,6 +69,7 @@ const AuthProvider = ({ children }) => {
         createUser,
         logIn,
         logOut ,
+        loading
     }
 
     return (
