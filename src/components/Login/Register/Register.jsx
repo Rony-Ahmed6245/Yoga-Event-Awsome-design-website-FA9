@@ -39,12 +39,10 @@ const Register = () => {
             // Password is too short
             console.log('Password at least 6 characters');
             setSetPasswordError('Password at least 6 characters');
-            return; // Exit the function or return from the component function
+            return; 
         } else if ((/^(?![A-Z])[^!@#$%^&*()_+{}\[\]:;<>,.?~\\\/]*$/.test(password))) {
-            // Password does not contain uppercase characters
-            console.log('Password should include at least one uppercase letter (A-Z)');
-            setUpperCaseErr('Password should include at least one uppercase letter (A-Z)');
-            return; // Exit the function or return from the component function
+            setUpperCaseErr(' At least one uppercase(A-Z) and Special Character');
+            return; 
         }
         
         

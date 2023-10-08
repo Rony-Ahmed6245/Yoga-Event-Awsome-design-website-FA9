@@ -1,19 +1,24 @@
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Healthy = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000})
+    },[])
 
     return (
-        <div className="bg-none flower-bg lg:bg-[url('https://i.ibb.co/tJ6fRKZ/images.jpg')]   w-full ">
+        <div   className="bg-none flower-bg lg:bg-[url('https://i.ibb.co/tJ6fRKZ/images.jpg')]   w-full ">
             <div className="max-w-7xl mx-auto my-10 px-3 md:px-2 lg:0">
                 <div>
-                    <div className="mt-20 text-center ">
+                    <div data-aos="fade-up"  className="mt-20 text-center ">
                         <div className="flex justify-center">
                             <img className="" src={'https://i.ibb.co/GVYkfDx/Screenshot-2023-10-07-041440.png'} alt="" />
                         </div>
                         <h1 className="text-4xl font-bold">LIVE HEALTHY LIFE</h1>
-                        <p className="text-lg text-gray-500 mt-5">Pellentesque aliquet sed magna consequat venenatis. Ut fermentum viverra <br />  porta. Nullam dui odio, tempus ut porttitor non, dignissim vel felis. Vestibulum convallis eu eros sit amet</p>
+                        <p className="text-lg text-gray-500 mt-5">Yoga can be a wonderful perk to add to your event. And it requires only a small <br /> investment: the fee for one instructor, and setting aside a nice space. If you can, go and attend a class with the instructor you hire</p>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-5 gap-10 -z-10 mt-10">
+                    <div data-aos="fade-up" className="grid grid-cols-1 md:grid-cols-5 gap-10 -z-10 mt-10">
                         <div className="  rounded-lg md:px-14 py-10 text-white md:col-span-2 ">
 
                             <div className="h-96 border  md:-mr-44 carousel carousel-vertical rounded-box">
@@ -31,7 +36,7 @@ const Healthy = () => {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="carousel-item h-full ">
+                                <div  className="carousel-item h-full ">
                                     {/* <img src={'https://i.ibb.co/L5vhJxH/pdt1-600x.webp'} /> */}
                                     <div className="card card-compact bg-[#F4F4F4]  shadow-xl">
                                         <figure><img className="relative" src={'https://i.ibb.co/4sPMQHY/pdt14-600x.webp'} alt="Shoes" /></figure>

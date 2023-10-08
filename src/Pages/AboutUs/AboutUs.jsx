@@ -17,8 +17,8 @@ const AboutUs = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 justify-center items-center" >
                 
                 <div>
-                    <h1 className="text-2xl font-bold text-[#DC2C5C]">Feel Relax After Meditation</h1>
-                    <p className="text-gray-400 font-medium">After-school programs at Boys & Girls Clubs supports the kids of all walks of life. Doing well in a game helps them to excel in academics as well. This year’s Back2School retail partners and their patrons will ensure Club members have the resources. Scholarships are available for talented students</p>
+                    <h1 className="text-2xl font-bold text-[#DC2C5C]">Rachel Yoga</h1>
+                    <p className="text-gray-400 font-medium">Our very own Rachel Scott maintains a blog that’s noteworthy for its openness, humour and lively style. The blog is a window into Rachel’s soul as she explores life through yoga. It’s a different approach to yoga blogging and it works. But don’t take my not-so-objective word for it. Check it out for yourself.</p>
                 </div>
                 <div>
                     <img className="hover:border-[#DC2C5C] border-white transition duration-700 ease-in-out  border-r-8 border-t-8" src={'https://i.ibb.co/wC6YM3D/about003-d85a9cb4-d856-42e0-85ae-aa744e21e11a-600x.webp'} alt="" />

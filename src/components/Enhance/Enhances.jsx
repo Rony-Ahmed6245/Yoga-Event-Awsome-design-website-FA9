@@ -1,8 +1,13 @@
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Enhances = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000})
+    },[])
     return (
-        <div className="flower-bg my-10 bg-cover w-full h-96 bg-[url('https://i.ibb.co/n03WxFJ/banner04-2048x.webp')]">
+        <div data-aos="zoom-in" className="flower-bg my-10 bg-cover w-full h-96 bg-[url('https://i.ibb.co/n03WxFJ/banner04-2048x.webp')]">
             <div className="max-w-7xl mx-auto">
                 <div className="text-left p-4 text-white">
                     <h2></h2>

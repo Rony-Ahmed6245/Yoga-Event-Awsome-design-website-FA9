@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Navbar = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000})
+    },[])
     const { user, logOut } = useContext(AuthContext)
     const handelLogout = () =>{
         logOut()
@@ -71,7 +77,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="bg-[#DC2C5C]">
+        <div data-aos="fade-down" className="bg-[#DC2C5C]">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">
@@ -88,9 +94,18 @@ const Navbar = () => {
                                     <li className="text-4xl px-3">{aboutUs}</li>
                                     <li className="text-4xl px-3">{contactUs}</li>
                                     <li className="text-4xl px-3 mb-5">{faq}</li>
-                                    <Link to='/login' className=" py-2 mt-12 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                        Login
-                                    </Link>
+                                    {
+                                    user ? <>
+                                        <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                            Logout
+                                        </Link>
+                                    </> :
+                                        <>
+                                            <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                                Login
+                                            </Link>
+                                        </>
+                                }
                                 </ul>
                             </div>
                         </div>

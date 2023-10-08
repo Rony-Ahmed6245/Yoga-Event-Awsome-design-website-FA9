@@ -2,21 +2,27 @@ import { AiFillTag } from "react-icons/ai";
 import { BsCalendar2 } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Blogs = () => {
+    useEffect(()=>{
+        Aos.init({duration:2000})
+    },[])
     return (
         <div className="max-w-7xl mx-auto" >
-            <div className="my-10 text-center  ">
+            <div  data-aos="zoom-out-up" className="my-10 text-center  ">
                 <div className="flex justify-center">
                     <img className="" src={'https://i.ibb.co/GVYkfDx/Screenshot-2023-10-07-041440.png'} alt="" />
                 </div>
                 <h1 className="text-4xl font-bold">OUR BLOGS</h1>
-                <p className="text-lg text-gray-500 mt-5">Pellentesque aliquet sed magna consequat venenatis. Ut fermentum viverra <br />  porta. Nullam dui odio, tempus ut porttitor non, dignissim vel felis. Vestibulum convallis eu eros sit amet</p>
+                <p className="text-lg text-gray-500 mt-5"> Our very own Rachel Scott maintains a blog that’s noteworthy for its openness,<br /> humour and lively style. The blog is a window into Rachel’s soul as she explores life through yoga</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
 
-                <div className="  bg-base-100 border">
+                <div data-aos="fade-right" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/G5tMjK5/blog8.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
@@ -36,7 +42,7 @@ const Blogs = () => {
                     </div>
 
                 </div>
-                <div className="  bg-base-100 border">
+                <div data-aos="fade-left" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/Jj5CrBh/blog10.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
