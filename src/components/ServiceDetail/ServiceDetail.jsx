@@ -8,17 +8,17 @@ const ServiceDetail = () => {
     // console.log(data);
     const { id } = useParams()
     const service = data.find(item => item.id == id);
-    const { img, title, dsc } = service || {}
+    const { img, title, long_dsc } = service || {}
 
     return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-                <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+        <div className='max-w-7xl mx-auto my-5 px-4'>
+            <div className="card lg:card-side bg-base-100 shadow-xl">
+                <figure><img src={img}alt="Album" /></figure>
                 <div className="card-body">
-                    <h2 className="card-title">{title}</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 className="card-title text-3xl font-bold text-gray-500">{title}</h2>
+                    <p className='text-lg font-semibold text-gray-400 '>{long_dsc}</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn border text-white bg-[#ED0B5A]">Feedback</button>
                     </div>
                 </div>
             </div>

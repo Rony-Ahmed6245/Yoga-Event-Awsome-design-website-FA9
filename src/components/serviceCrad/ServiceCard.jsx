@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 
 const ServiceCard = ({ service }) => {
-    console.log(service);
+    // console.log(service);
     const {title, img, dsc , id} = service || {}
     return (
         <div>

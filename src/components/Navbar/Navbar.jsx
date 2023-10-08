@@ -1,7 +1,22 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const Navbar = () => {
+    const { user, logOut } = useContext(AuthContext)
+    const handelLogout = () =>{
+        logOut()
+        .then(result => {
+            console.log(result);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
+
+
     const home = <NavLink
         to="/"
         className={({ isActive, isPending }) =>
@@ -11,13 +26,13 @@ const Navbar = () => {
         HOME
     </NavLink>;
     const shop = <NavLink
-    to="/shop"
-    className={({ isActive, isPending }) =>
-        isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans" : "bgTrans"
-    }
->
-    SHOP
-</NavLink>;
+        to="/shop"
+        className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans" : "bgTrans"
+        }
+    >
+        SHOP
+    </NavLink>;
     const blog = <NavLink
         to="/blog"
         className={({ isActive, isPending }) =>
@@ -74,8 +89,8 @@ const Navbar = () => {
                                     <li className="text-4xl px-3">{contactUs}</li>
                                     <li className="text-4xl px-3 mb-5">{faq}</li>
                                     <Link to='/login' className=" py-2 mt-12 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                Login
-                                </Link>
+                                        Login
+                                    </Link>
                                 </ul>
                             </div>
                         </div>
@@ -87,9 +102,19 @@ const Navbar = () => {
                                 <li>{aboutUs}</li>
                                 <li>{contactUs}</li>
                                 <li>{faq}</li>
-                                <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                Login
-                                </Link>
+                                {
+                                    user ? <>
+                                        <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                            Logout
+                                        </Link>
+                                    </> :
+                                        <>
+                                            <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                                Login
+                                            </Link>
+                                        </>
+                                }
+
                             </ul>
                         </div>
                     </div>

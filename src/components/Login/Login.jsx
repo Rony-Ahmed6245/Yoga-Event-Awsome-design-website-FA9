@@ -1,7 +1,27 @@
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
+    
+    const {logIn} = useContext(AuthContext)
+    const handelSignIn =(e)=>{
+        e.preventDefault()
+        const name = e.target.name.value;
+        const email = e.target.email.value;
+        const password = e.target.email.value;
+        // console.log(name, email, password);
+        logIn(email, password)
+        .then(result => {
+            console.log(result);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
+
     return (
         <div>
             <div className=" max-w-7xl mx-auto">
@@ -10,7 +30,7 @@ const Login = () => {
 
                     <div className="shadow-md rounded-lg">
                         <h1 className="text-2xl font-bold text-gray-400 mt-4 text-center">Please Login & Access Yoga Service</h1>
-                        <form className="card-body px-4 ">
+                        <form onSubmit={handelSignIn} className="card-body px-4 ">
                             <div className="form-control">
                                 <input type="text" name="name" placeholder="Name" className="input w-full input-bordered rounded-full" required />
                             </div>
