@@ -12,6 +12,7 @@ const ServiceDetail = () => {
 
     return (
         <div className='max-w-7xl mx-auto my-5 px-4'>
+             <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">SERVICE DETAILS</h1>
             <div className="card lg:card-side bg-base-100 shadow-xl md:my-32 ">
                 <figure><img className=' h-full' src={img}alt="Album" /></figure>
                 <div className="card-body">

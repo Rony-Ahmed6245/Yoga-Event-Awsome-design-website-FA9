@@ -5,12 +5,8 @@ import app from "../firebase/firebase.config";
 import { useEffect } from "react";
 
 
-
-
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
-
-
 
 
 const AuthProvider = ({ children }) => {
@@ -21,12 +17,7 @@ const AuthProvider = ({ children }) => {
     // register part
     const createUser = (email, password) => {
         return createUserWithEmailAndPassword(auth, email, password)
-            .then(result => {
-                console.log(result);
-            })
-            .catch(err => {
-                console.log(err);
-            })
+          
     }
 
     // logIn 

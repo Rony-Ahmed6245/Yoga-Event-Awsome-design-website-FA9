@@ -1,33 +1,87 @@
 
 
+import { useState } from 'react';
 import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+// import { BiError } from "react-icons/bi";
 
 
 
 
 
 const Register = () => {
-    const {createUser} = useContext(AuthContext);
-    const handelRegister = (e) =>{
+
+    const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState()
+    const [passwordError, setSetPasswordError] = useState()
+    const [upperCaseErr, setUpperCaseErr ] = useState()
+    const [success, setSuccess] = useState('')
+
+
+
+    const handelRegister = (e) => {
         e.preventDefault()
-        const displayName= e.target.name.value;
+        // reset error 
+        
+        setRegisterError('');
+        setSuccess('');
+        setSetPasswordError('')
+        setUpperCaseErr('')
+        
+        const displayName = e.target.name.value;
         const email = e.target.email.value;
-        const password = e.target.email.value;
+        const password = e.target.password.value;
         // console.log(name, email, password);
+        if (password.length < 6) {
+            // Password is too short
+            console.log('Password at least 6 characters');
+            setSetPasswordError('Password at least 6 characters');
+            return; // Exit the function or return from the component function
+        } else if ((/^(?![A-Z])[^!@#$%^&*()_+{}\[\]:;<>,.?~\\\/]*$/.test(password))) {
+            // Password does not contain uppercase characters
+            console.log('Password should include at least one uppercase letter (A-Z)');
+            setUpperCaseErr('Password should include at least one uppercase letter (A-Z)');
+            return; // Exit the function or return from the component function
+        }
+        
+        
+        
+       
+
         createUser(email, password, displayName)
-        .then(result => {
-            console.log(result);
-        })
-        .catch(err => {
-            console.log(err);
-        })
-        createUser('')
+            .then(result => {
+                // console.log(result);
+                setSuccess('User Created successfully.')
+                return
+            })
+            .catch(error => {
+                // setRegisterError(error.message);
+                // setRegisterError(error.message)
+                if(error.message){
+                    setRegisterError('already register')
+                    return
+                }
+
+            })
+
+        
+        // createUser('')
     }
 
+    // {/* Display error message */ }
+    // {
+    //     registerError && (
+    //         <>
+    //             {
+    //                 toast("Wow so easy!")
+    //             }
+    //         </>
+    //     )
+    // }
 
-    
 
 
 
@@ -53,13 +107,35 @@ const Register = () => {
                                     <input type="password" name='password' placeholder="Password" className="input input-bordered rounded-full" required />
                                 </div>
                                 <h1 className="text-sm p-2">Forget Password</h1>
+                                {/* Display the error message */}
+                                {registerError && (
+                                    <div className="text-red-500 font-bold text-center my-2">      
+                                          {registerError}
+                                    </div>
+                                )}
+                                {upperCaseErr && (
+                                    <div className="text-red-500 font-bold text-center my-2">      
+                                          {upperCaseErr}
+                                    </div>
+                                )}
+                                {passwordError && (
+                                    <div className="text-red-500 font-bold text-center my-2">      
+                                          {passwordError}
+                                    </div>
+                                )}
+                                {success && (
+                                    <div className="text-green-500 font-bold text-center my-2">      
+                                         {success}  
+                                    </div>
+                                )}
                                 <div className="flex justify-center">
                                     <button className="btn bg-[#ED0B5A] hover:text-gray-500 px-8 rounded-full text-white">Register</button>
                                 </div>
+
                             </form>
                             <h2 className="text-center text-lg font-semibold">Already have an Account ? Please <Link to='/login' className="text-[#ED0B5A] underline">Login</Link> </h2>
-                            
-                            
+
+
                         </div>
                         <div className="">
                             <img src={'https://i.ibb.co/wC6YM3D/about003-d85a9cb4-d856-42e0-85ae-aa744e21e11a-600x.webp'} className=" rounded-lg shadow-2xl" />
@@ -67,6 +143,7 @@ const Register = () => {
                     </div>
                 </div>
             </div>
+            {/* <ToastContainer /> */}
         </div>
     );
 };

@@ -1,20 +1,29 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
     
-    const {logIn} = useContext(AuthContext)
+    const {logIn} = useContext(AuthContext);
+    const location = useLocation();
+    console.log(location);
+    const navigate = useNavigate()
+
+
+
     const handelSignIn =(e)=>{
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
-        const password = e.target.email.value;
+        const password = e.target.password.value;
         // console.log(name, email, password);
         logIn(email, password)
         .then(result => {
             console.log(result);
+
+            navigate(location?. state ? location.state : '/')
+
         })
         .catch(err => {
             console.log(err);
