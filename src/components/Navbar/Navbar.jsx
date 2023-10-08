@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 
 const Navbar = () => {
@@ -72,23 +72,25 @@ const Navbar = () => {
                                     <li className="text-4xl px-3">{blog}</li>
                                     <li className="text-4xl px-3">{aboutUs}</li>
                                     <li className="text-4xl px-3">{contactUs}</li>
-                                    <li className="text-4xl px-3">{faq}</li>
+                                    <li className="text-4xl px-3 mb-5">{faq}</li>
+                                    <Link to='/login' className=" py-2 mt-12 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                Login
+                                </Link>
                                 </ul>
                             </div>
                         </div>
                         <div className="navbar-center hidden lg:flex">
-                            <ul className=" menu-horizontal px-4 gap-2 lg:gap-5  text-white font-medium md:font-bold">
+                            <ul className=" menu-horizontal flex items-center px-4 gap-2 lg:gap-5  text-white font-medium md:font-bold">
                                 <li className="">{home}</li>
                                 <li className="">{shop}</li>
                                 <li>{blog}</li>
                                 <li>{aboutUs}</li>
                                 <li>{contactUs}</li>
                                 <li>{faq}</li>
-
-                            </ul>
-                            <button className="btn-sm rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
                                 Login
-                            </button>
+                                </Link>
+                            </ul>
                         </div>
                     </div>
                 </div>

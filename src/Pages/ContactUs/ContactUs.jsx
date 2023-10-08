@@ -49,7 +49,6 @@ const ContactUs = () => {
                         <div className="form-control">
                             <textarea name="text" className="border outline-none rounded-lg p-4 " placeholder="Massage....." id="" cols="30" rows="10"></textarea>
                         </div>
-
                     </form>
                     <div className="form-control mb-6 flex  items-center">
                         <button className="btn w-32 rounded-full bg-[#DC2C5C] text-white hover:text-black">Sand</button>

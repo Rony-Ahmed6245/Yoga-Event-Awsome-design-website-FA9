@@ -5,6 +5,8 @@ import ContactUs from "../../Pages/ContactUs/ContactUs";
 import Faq from "../../Pages/FAQ/Faq";
 import Home from "../../Pages/Home";
 import Shop from "../../Pages/Shop/Shop";
+import Login from "../Login/Login";
+import Register from "../Login/Register/Register";
 import Root from "../Root/Root";
 
 
@@ -36,6 +38,14 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/faq',
                 element:<Faq></Faq>,
+            },
+            {
+                path:'/login',
+                element:<Login></Login>,
+            },
+            {
+                path:'/register',
+                element:<Register></Register>
             }
         ]
     }

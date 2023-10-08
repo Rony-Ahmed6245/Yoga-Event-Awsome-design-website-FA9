@@ -1,0 +1,46 @@
+import { Link } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+
+const Login = () => {
+    return (
+        <div>
+            <div className=" max-w-7xl mx-auto">
+                <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">LOGIN</h1>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 ">
+
+                    <div className="shadow-md rounded-lg">
+                        <h1 className="text-2xl font-bold text-gray-400 mt-4 text-center">Please Login & Access Yoga Service</h1>
+                        <form className="card-body px-4 ">
+                            <div className="form-control">
+                                <input type="text" name="name" placeholder="Name" className="input w-full input-bordered rounded-full" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="email" name="email" placeholder="Email" className="input input-bordered rounded-full my-4" required />
+                            </div>
+                            <div className="form-control">
+                                <input type="password" name="password" placeholder="Password" className="input input-bordered rounded-full" required />
+                            </div>
+                            <h1 className="text-sm p-2">Forget Password</h1>
+                            <div className="flex justify-center">
+                                <button className="btn bg-[#ED0B5A] hover:text-gray-500 px-8 rounded-full text-white">Login</button>
+                            </div>
+                        </form>
+                        <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-[#ED0B5A] underline">Register</Link> </h2>
+                        <h4 className="text-md text-center">OR</h4>
+                        <div className="flex justify-center ">
+                            <div className="flex items-center my-2 gap-3 justify-center w-[250px] border p-2 rounded-full">
+                                <FcGoogle className="text-xl"></FcGoogle>
+                                <h2 className="text-md font-bold ">Continue with Google</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="">
+                        <img src={'https://i.ibb.co/wC6YM3D/about003-d85a9cb4-d856-42e0-85ae-aa744e21e11a-600x.webp'} className=" rounded-lg shadow-2xl" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default Login;
