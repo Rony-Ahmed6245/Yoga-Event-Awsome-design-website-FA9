@@ -8,6 +8,8 @@ import Shop from "../../Pages/Shop/Shop";
 import Login from "../Login/Login";
 import Register from "../Login/Register/Register";
 import Root from "../Root/Root";
+import ServiceDetail from "../ServiceDetail/ServiceDetail";
+import Services from "../Services/Services";
 
 
 const myCreateRoute = createBrowserRouter([
@@ -46,6 +48,16 @@ const myCreateRoute = createBrowserRouter([
             {
                 path:'/register',
                 element:<Register></Register>
+            },
+            {
+                path:'/services',
+                element:<Services></Services>,
+                loader:()=>fetch('/services.json'),
+            },
+            {
+                path:'/serviceDetail/:id',
+                element:<ServiceDetail></ServiceDetail>,
+                loader: () => fetch('/services.json')
             }
         ]
     }

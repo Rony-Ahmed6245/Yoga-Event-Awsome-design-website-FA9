@@ -17,7 +17,7 @@ const Shop = () => {
             .then((data) => setProducts(data))
             .catch((error) => console.error('Error fetching data:', error));
     }, []);
-    console.log(products);
+    // console.log(products);
 
     return (
         <div className="max-w-7xl mx-auto my-8">
