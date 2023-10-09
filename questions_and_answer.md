@@ -15,16 +15,11 @@ console.log(greetign);
 - B: `ReferenceError: greetign is not defined`
 - C: `undefined`
 
-<details>
-<summary><b>{} , `ReferenceError: greetign is not defined`</b></summary>
-<p>
+<h1>Ans: A & B both</h1>
+<p>this code will create an empty object and assign it to the greeting variable. Then, it will log the contents of the greeting variable, which will result in an output of an empty object {} being displayed in the console || . JavaScript is case-sensitive, so greetign and greeting are treated as two different variables. Therefore, greetign is not defined, and attempting to log it will result in a ReferenceError</p>
 
 #### Answer: A and B both ;
 
-<i>this code will create an empty object and assign it to the greeting variable. Then, it will log the contents of the greeting variable, which will result in an output of an empty object {} being displayed in the console || . JavaScript is case-sensitive, so greetign and greeting are treated as two different variables. Therefore, greetign is not defined, and attempting to log it will result in a ReferenceError.</i>
-
-</p>
-</details>
 
 ###### 2. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
