@@ -16,9 +16,9 @@ console.log(greetign);
 - C: `undefined`
 
 <h1>Ans: A & B both</h1>
-<p>this code will create an empty object and assign it to the greeting variable. Then, it will log the contents of the greeting variable, which will result in an output of an empty object {} being displayed in the console || . JavaScript is case-sensitive, so greetign and greeting are treated as two different variables. Therefore, greetign is not defined, and attempting to log it will result in a ReferenceError</p>
+<p>Explaine : This code will create an empty object and assign it to the greeting variable. Then, it will log the contents of the greeting variable, which will result in an output of an empty object {} being displayed in the console || . JavaScript is case-sensitive, so greetign and greeting are treated as two different variables. Therefore, greetign is not defined, and attempting to log it will result in a ReferenceError</p>
 
-#### Answer: A and B both ;
+
 
 
 ###### 2. Write the `correct answer` from the following options and give an explanation (2-5 lines).
@@ -35,18 +35,10 @@ sum(1, "2");
 - B: `TypeError`
 - C: `"12"`
 - D: `3`
+ <h1>Ans: C - 12</h1>
+ <p> Explaine: sum function two parameter given a and b, using the + operator. a is number type value and b is string type value so a and b addition value is 12</p>
 
-<details><summary><b>12</b></summary>
-<p>
 
-#### Answer: C ;
-
-<i>
-sum function two parameter given a and b, using the + operator. a is number type value and b is string type value so a and b addition value is 12 ; 
-</i>
-
-</p>
-</details>
 
 ###### 3. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -64,16 +56,10 @@ console.log(food);
 - C: `['🍝', '🍕', '🍫', '🥑', '🍔']`
 - D: `ReferenceError`
 
-<details><summary><b>`['🍕', '🍫', '🥑', '🍔']`</b></summary>
-<p>
 
-#### Answer: A ?
+ <h1>Ans: A -- ['🍕', '🍫', '🥑', '🍔'] </h1>
+<p> Explaine: food is array , this array have 4 element , info is object with a fav property initially set to the first element of the food array, which is 🍕 , update the info.fav property to 🍝 , info object property does not affect the original food array. So, when you log the food array, it remains unchanged  </p>
 
-<i>food is array , this array have 4 element , info is object with a fav property initially set to the first element of the food array, which is 🍕 , update the info.fav property to 🍝 , info object property does not affect the original food array. So, when you log the food array, it remains unchanged 
- </i>
-
-</p>
-</details>
 
 ###### 4. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -90,16 +76,11 @@ console.log(sayHi());
 - C: `Hi there, null`
 - D: `ReferenceError`
 
-<details><summary><b>Hi there, undefined</b></summary>
-<p>
+ <h1>Ans:  B-- `Hi there, undefined`</h1>
 
-#### Answer: B ;
+<p>Explaine: sayHi is a  function give a 'name' parameter, which you can use to build the greeting message. However, when you call sayHi() without passing any argument, the name parameter inside the function becomes undefined.
+So, the function attempts to concatenate undefined with the greeting string, resulting in 'Hi there, undefined'</p>
 
-<i>sayHi is a  function give a 'name' parameter, which you can use to build the greeting message. However, when you call sayHi() without passing any argument, the name parameter inside the function becomes undefined.
-So, the function attempts to concatenate undefined with the greeting string, resulting in 'Hi there, undefined'</i>
-
-</p>
-</details>
 
 ###### 5. Write the `correct answer` from the following options and give an explanation (2-5 lines).
 
@@ -119,16 +100,12 @@ console.log(count);
 - C: 3
 - D: 4
 
-<details><summary><b>3</b></summary>
-<p>
 
-#### Answer: C ;
-
-<i>
+ <h1>Ans:C -- 3</h1>
+<p>Explaine:
  nums is an array . this array in 4 length . this array used in forEach method to iterate through each element of the array.
 array fast element is 0 so counting value is falsy .and 1, 2, 3 it is considered truthy so increment count variable by 1 .
 so false is count value is unchanged and true is count value increment by 1 for each of these value.
-</i>
-
 </p>
-</details>
+
+
