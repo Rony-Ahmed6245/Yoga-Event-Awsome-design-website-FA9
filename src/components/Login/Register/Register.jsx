@@ -7,12 +7,17 @@ import { AuthContext } from '../../../Providers/AuthProvider';
 // import { ToastContainer, toast } from 'react-toastify';
 // import 'react-toastify/dist/ReactToastify.css';
 // import { BiError } from "react-icons/bi";
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 
 
 const Register = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+    },[])
 
     const { createUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState()
@@ -71,10 +76,10 @@ const Register = () => {
         <div>
             <div>
                 <div className=" max-w-7xl mx-auto">
-                    <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">REGISTER</h1>
+                    <h1 data-aos="flip-up" className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">REGISTER</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-5 p-4 ">
 
-                        <div className="shadow-md rounded-lg">
+                        <div data-aos="fade-up-right" className="shadow-md rounded-lg">
                             <h1 className="text-2xl font-bold text-gray-400 mt-4 text-center">Please Register & Access Yoga Service</h1>
                             <form onSubmit={handelRegister} className="card-body px-4 ">
                                 <div className="form-control">
@@ -117,7 +122,7 @@ const Register = () => {
 
 
                         </div>
-                        <div className="">
+                        <div data-aos="fade-up-left" className="">
                             <img src={'https://i.ibb.co/wC6YM3D/about003-d85a9cb4-d856-42e0-85ae-aa744e21e11a-600x.webp'} className=" rounded-lg shadow-2xl" />
                         </div>
                     </div>

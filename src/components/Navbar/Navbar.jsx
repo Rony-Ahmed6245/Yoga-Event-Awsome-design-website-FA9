@@ -45,7 +45,7 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? " text-red-400 border-b px-2 py-1 rounded-lg font-bold bgTrans " : ""
         }
     >
-        BLOG
+        BLOGS
     </NavLink>;
     const aboutUs = <NavLink
         to="/aboutus"
@@ -81,11 +81,14 @@ const Navbar = () => {
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">
-                        <img className="w-[150px] md:w-[200px]" src={'https://i.ibb.co/cgSdsT0/logo-1-300x300.webp'} alt="" />
+                        <div>
+                            <img className="w-[60px] " src={'https://i.ibb.co/dtZrfrc/Screenshot-2023-10-09-172048.png'} alt="" />
+                            <h1 className="text-white text-5xl font-bold">YOGA</h1>
+                        </div>
                         <div className="">
                             <div className="dropdown">
                                 <label tabIndex={1} className="btn btn-ghost lg:hidden">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-[40px] text-white w-[30px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-[50px] text-white w-[50px]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                                 </label>
                                 <ul tabIndex={0} className=" menus menu-sm dropdown-content bg-white  py-4 border z-[10]  rounded-box  -left-20 ">
                                     <li className="text-4xl px-3">{home}</li>
@@ -127,7 +130,7 @@ const Navbar = () => {
                                                     <div className="w-10 rounded-full flex items-center">
                                                         <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
                                                     </div>
-                                                    <p>{user.displayName == null ? 'MR' : user.displayName}</p>
+                                                    <p className="font-mono">{user.displayName == null ? 'MR' : user.displayName}</p>
                                                 </> :
                                                     <>
 

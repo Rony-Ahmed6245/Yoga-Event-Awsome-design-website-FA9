@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
 import Product from "../../components/ProductCard/Product";
+import Aos from "aos";
+import 'aos/dist/aos.css'
 
 
 const Shop = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 })
+    }, [])
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
@@ -21,8 +26,9 @@ const Shop = () => {
 
     return (
         <div className="max-w-7xl mx-auto my-8">
-             <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">SHOP</h1>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
+            <h1  data-aos="flip-up" className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">SHOP</h1>
+            <div data-aos="fade-up"
+                data-aos-anchor-placement="bottom-bottom" className="grid grid-cols-1 md:grid-cols-4 gap-4 px-4">
                 {
                     products.map((product) => (
                         <Product key={product.id} product={product}></Product>

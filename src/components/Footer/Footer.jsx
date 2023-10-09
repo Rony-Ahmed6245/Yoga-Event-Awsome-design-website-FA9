@@ -1,6 +1,7 @@
 
 
 const Footer = () => {
+   
     return (
         <div className=" bg-[#F9F9F9] ">
             <footer className="footer px-2 py-4 max-w-7xl m-auto  text-base-content">

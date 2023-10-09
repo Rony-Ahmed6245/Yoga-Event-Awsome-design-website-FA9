@@ -1,11 +1,16 @@
-
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const Faq = () => {
+    useEffect(()=>{
+        Aos.init({duration:1000})
+    },[])
     return (
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">FAQ</h1>
+            <h1 data-aos="flip-up" className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">FAQ</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
+                <div data-aos="fade-right">
                     <div className="join join-vertical w-full px-4 py-8">
                         <div className="collapse collapse-arrow join-item border border-base-300 text-white bg-[#DC2C5C]">
                             <input type="radio" name="my-accordion-4" checked="checked" />
@@ -54,7 +59,7 @@ const Faq = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div data-aos="fade-left">
                     <img className=" p-4 mt-4 " src={'https://i.ibb.co/fFc9QRQ/banner3-1060x.webp'} alt="" />
                 </div>
             </div>

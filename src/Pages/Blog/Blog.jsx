@@ -1,22 +1,22 @@
 import { BsCalendar2 } from "react-icons/bs";
 import { FaUser } from "react-icons/fa6";
 import { AiFillTag } from "react-icons/ai";
-// import Aos from "aos";
-// import 'aos/dist/aos.css'
-// import { useEffect } from "react";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Blog = () => {
-    // useEffect(()=>{
-    //     Aos.init({duration:2000})
-    // },[])
+    useEffect(()=>{
+        Aos.init({duration:1000})
+    },[])
 
     return (
         <div className="max-w-7xl mx-auto">
-            <h1 className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">BLOG</h1>
+            <h1 data-aos="flip-up" className="text-4xl font-extrabold text-center my-8 text-[#DC2C5C]">BLOG</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4 my-4">
 
-                <div  className="  bg-base-100 border">
+                <div data-aos="fade-right" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/G5tMjK5/blog8.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
@@ -36,7 +36,7 @@ const Blog = () => {
                     </div>
 
                 </div>
-                <div  className="  bg-base-100 border">
+                <div data-aos="fade-left" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/Jj5CrBh/blog10.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
@@ -55,7 +55,7 @@ const Blog = () => {
                     </div>
 
                 </div>
-                <div  className="  bg-base-100 border">
+                <div data-aos="fade-right" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/xJ1brvB/blog11.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
@@ -74,7 +74,7 @@ const Blog = () => {
                     </div>
 
                 </div>
-                <div  className="  bg-base-100 border">
+                <div data-aos="fade-left"  className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/5MPF8x0/blog9.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">

@@ -13,7 +13,7 @@ const Blogs = () => {
     },[])
     return (
         <div className="max-w-7xl mx-auto" >
-            <div    className="my-10 text-center  ">
+            <div data-aos="zoom-in-down"   className="my-10 text-center  ">
                 <div className="flex justify-center">
                     <img className="" src={'https://i.ibb.co/GVYkfDx/Screenshot-2023-10-07-041440.png'} alt="" />
                 </div>
