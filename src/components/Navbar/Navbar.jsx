@@ -7,16 +7,18 @@ import swal from 'sweetalert';
 const Navbar = () => {
 
     const { user, logOut } = useContext(AuthContext)
-    const handelLogout = () =>{
+    console.log(user);
+
+    const handelLogout = () => {
         logOut()
-        .then(result => {
-            // console.log(result);
-            swal("Success", "Logout successfully", "success")
-            return
-        })
-        .catch(err => {
-            swal("Error", "Logout not successfully", "Error")
-        })
+            .then(result => {
+                // console.log(result);
+                swal("Success", "Logout successfully", "success")
+                return
+            })
+            .catch(err => {
+                swal("Error", "Logout not successfully", "Error")
+            })
     }
 
 
@@ -75,7 +77,7 @@ const Navbar = () => {
 
 
     return (
-        <div  className="bg-[#DC2C5C]">
+        <div className="bg-[#DC2C5C]">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">
@@ -93,17 +95,17 @@ const Navbar = () => {
                                     <li className="text-4xl px-3">{contactUs}</li>
                                     <li className="text-4xl px-3 mb-5">{faq}</li>
                                     {
-                                    user ? <>
-                                        <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                            Logout
-                                        </Link>
-                                    </> :
-                                        <>
-                                            <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
-                                                Login
+                                        user ? <>
+                                            <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                                Logout
                                             </Link>
-                                        </>
-                                }
+                                        </> :
+                                            <>
+                                                <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
+                                                    Login
+                                                </Link>
+                                            </>
+                                    }
                                 </ul>
                             </div>
                         </div>
@@ -115,13 +117,30 @@ const Navbar = () => {
                                 <li>{aboutUs}</li>
                                 <li>{contactUs}</li>
                                 <li>{faq}</li>
+
                                 {
                                     user ? <>
+
+                                        <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                            {
+                                                user ? <>
+                                                    <div className="w-10 rounded-full flex items-center">
+                                                        <img src={user.photoURL == null ? 'https://i.ibb.co/2vkJbGD/images.png' : user.photoURL} alt="" />
+                                                    </div>
+                                                    <p>{user.displayName == null ? 'MR' : user.displayName}</p>
+                                                </> :
+                                                    <>
+
+                                                    </>
+                                            }
+
+                                        </label>
                                         <Link onClick={handelLogout} className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
                                             Logout
                                         </Link>
                                     </> :
                                         <>
+
                                             <Link to='/login' className=" py-2 px-4 rounded-full font-bold bg-white text-gray-500 md:ml-4 lg:ml-6">
                                                 Login
                                             </Link>

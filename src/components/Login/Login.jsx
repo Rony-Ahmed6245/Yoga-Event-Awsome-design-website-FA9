@@ -7,7 +7,7 @@ import swal from 'sweetalert';
 
 const Login = () => {
 
-    const { logIn } = useContext(AuthContext);
+    const { logIn, googleSignIn } = useContext(AuthContext);
     const location = useLocation();
     console.log(location);
     const navigate = useNavigate()
@@ -42,6 +42,16 @@ const Login = () => {
             })
     }
 
+    const handelGoogleSignIn = () => {
+        console.log('click google');
+        googleSignIn()
+        .then(result=>{
+            console.log(result);
+        })
+        .fatch(error=> {
+            console.log(error);
+        })
+    }
 
     return (
         <div>
@@ -88,9 +98,9 @@ const Login = () => {
                         <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-[#ED0B5A] underline">Register</Link> </h2>
                         <h4 className="text-md text-center">OR</h4>
                         <div className="flex justify-center ">
-                            <div className="flex items-center my-2 gap-3 justify-center w-[250px] border p-2 rounded-full">
+                            <div onClick={handelGoogleSignIn}  className="cursor-pointer flex items-center my-2 gap-3 justify-center w-[250px] border p-2 rounded-full">
                                 <FcGoogle className="text-xl"></FcGoogle>
-                                <h2 className="text-md font-bold ">Continue with Google</h2>
+                                <h2 className=" text-md font-bold ">Continue with Google</h2>
                             </div>
                         </div>
                     </div>
