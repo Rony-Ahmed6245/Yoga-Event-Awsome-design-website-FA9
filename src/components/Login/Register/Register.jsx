@@ -46,42 +46,24 @@ const Register = () => {
         }
         
         
-        
        
 
         createUser(email, password, displayName)
             .then(result => {
                 // console.log(result);
-                setSuccess('User Created successfully.')
+                setSuccess('User Created Successfully')
                 return
             })
             .catch(error => {
                 // setRegisterError(error.message);
                 // setRegisterError(error.message)
                 if(error.message){
-                    setRegisterError('already register')
+                    setRegisterError('Already Register')
                     return
                 }
 
             })
-
-        
-        // createUser('')
     }
-
-    // {/* Display error message */ }
-    // {
-    //     registerError && (
-    //         <>
-    //             {
-    //                 toast("Wow so easy!")
-    //             }
-    //         </>
-    //     )
-    // }
-
-
-
 
 
 

@@ -1,23 +1,21 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import Aos from "aos";
-import 'aos/dist/aos.css'
-import { useEffect } from "react";
+import swal from 'sweetalert';
 
 
 const Navbar = () => {
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
+
     const { user, logOut } = useContext(AuthContext)
     const handelLogout = () =>{
         logOut()
         .then(result => {
-            console.log(result);
+            // console.log(result);
+            swal("Success", "Logout successfully", "success")
+            return
         })
         .catch(err => {
-            console.log(err);
+            swal("Error", "Logout not successfully", "Error")
         })
     }
 
@@ -77,7 +75,7 @@ const Navbar = () => {
 
 
     return (
-        <div data-aos="fade-down" className="bg-[#DC2C5C]">
+        <div  className="bg-[#DC2C5C]">
             <div className="max-w-screen-xl	 mx-auto md:px-2">
                 <div className="px-4 md:px-4 lg:px-4   bg-none z-30 relative ">
                     <div className="navbar flex justify-between items-center ">

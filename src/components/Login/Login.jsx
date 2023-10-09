@@ -2,32 +2,44 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { useState } from "react";
+import swal from 'sweetalert';
 
 const Login = () => {
-    
-    const {logIn} = useContext(AuthContext);
+
+    const { logIn } = useContext(AuthContext);
     const location = useLocation();
     console.log(location);
     const navigate = useNavigate()
+    const [loginError, setLoginError] = useState()
+    const [loginSuccess, setLoginSuccess] = useState()
 
 
 
-    const handelSignIn =(e)=>{
+    const handelSignIn = (e) => {
+        setLoginError('')
+        setLoginSuccess('')
         e.preventDefault()
         const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
         // console.log(name, email, password);
         logIn(email, password)
-        .then(result => {
-            console.log(result);
-
-            navigate(location?. state ? location.state : '/')
-
-        })
-        .catch(err => {
-            console.log(err);
-        })
+            .then(result => {
+                console.log(result);
+                // alert('Login Successfully')
+                swal("Success!", "Login Successfully", "success")
+                navigate(location?.state ? location.state : '/')
+                return
+                
+            })
+            .catch(error => {
+                console.log(error);
+                if (error.message) {
+                    setLoginError("Password doesn't match")
+                    return
+                }
+            })
     }
 
 
@@ -50,9 +62,28 @@ const Login = () => {
                                 <input type="password" name="password" placeholder="Password" className="input input-bordered rounded-full" required />
                             </div>
                             <h1 className="text-sm p-2">Forget Password</h1>
+                            {
+                                loginError && (
+                                    <div className="text-red-500 font-bold text-center my-2">
+                                        {<div className="text-red-500 font-bold text-center my-2">
+                                            {loginError}
+                                        </div>}
+                                    </div>
+                                )
+                            }
+                            {
+                                loginSuccess && (
+                                    <div >
+                                        {<div className="text-green-500 font-bold text-center my-2">
+                                            {loginSuccess}
+                                        </div>}
+                                    </div>
+                                )
+                            }
                             <div className="flex justify-center">
                                 <button className="btn bg-[#ED0B5A] hover:text-gray-500 px-8 rounded-full text-white">Login</button>
                             </div>
+
                         </form>
                         <h2 className="text-center text-lg font-semibold">Not a member ? Please <Link to='/register' className="text-[#ED0B5A] underline">Register</Link> </h2>
                         <h4 className="text-md text-center">OR</h4>

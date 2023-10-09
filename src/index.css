@@ -10,3 +10,7 @@
 .flower-bgs{
     background-image: none;
 }
+.animation{
+    width: 100vw;
+    overflow-x: hidden;
+}

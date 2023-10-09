@@ -1,11 +1,11 @@
-import Aos from "aos";
-import 'aos/dist/aos.css'
-import { useEffect } from "react";
+// import Aos from "aos";
+// import 'aos/dist/aos.css'
+// import { useEffect } from "react";
 
 const Subscribe = () => {
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
+    // useEffect(()=>{
+    //     Aos.init({duration:2000})
+    // },[])
     return (
         <div  data-aos="zoom-in-down" className="bg-[#ED0B5A]">
           

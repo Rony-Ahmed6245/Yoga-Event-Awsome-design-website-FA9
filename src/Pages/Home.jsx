@@ -12,10 +12,9 @@ import Support from "../components/Support/Support";
 const Home = () => {
    
     return (
-        <div>
+        <div className="w-[100vw] overflow-x-hidden">
             <Banner></Banner>
             <Healthy></Healthy>
-
             <Services></Services>
             <Enhances></Enhances>
             <Blogs></Blogs>

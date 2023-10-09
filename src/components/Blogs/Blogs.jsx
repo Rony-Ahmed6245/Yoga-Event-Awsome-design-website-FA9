@@ -13,7 +13,7 @@ const Blogs = () => {
     },[])
     return (
         <div className="max-w-7xl mx-auto" >
-            <div  data-aos="zoom-out-up" className="my-10 text-center  ">
+            <div    className="my-10 text-center  ">
                 <div className="flex justify-center">
                     <img className="" src={'https://i.ibb.co/GVYkfDx/Screenshot-2023-10-07-041440.png'} alt="" />
                 </div>
@@ -22,7 +22,7 @@ const Blogs = () => {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-4">
 
-                <div data-aos="fade-right" className="  bg-base-100 border">
+                <div data-aos="fade-up-right"  className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/G5tMjK5/blog8.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">
@@ -42,7 +42,7 @@ const Blogs = () => {
                     </div>
 
                 </div>
-                <div data-aos="fade-left" className="  bg-base-100 border">
+                <div data-aos="fade-up-left" className="  bg-base-100 border">
                     <figure><img src={'https://i.ibb.co/Jj5CrBh/blog10.webp'} alt="Shoes" /></figure>
                     <div className="flex justify-evenly text-sm text-[#9E9E9E] py-4 font-bold items-center">
                         <h1 className="flex gap-2 items-center">

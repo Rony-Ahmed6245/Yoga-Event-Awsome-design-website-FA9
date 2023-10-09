@@ -1,16 +1,16 @@
-import Aos from "aos";
-import 'aos/dist/aos.css'
-import { useEffect } from "react";
+// import Aos from "aos";
+// import 'aos/dist/aos.css'
+// import { useEffect } from "react";
 
 
 const Support = () => {
-    useEffect(()=>{
-        Aos.init({duration:2000})
-    },[])
+    // useEffect(()=>{
+    //     Aos.init({duration:2000})
+    // },[])
     return (
         <div>
             <div className="max-w-7xl mx-auto px-2 md:px-2 lg:px-0">
-                <div data-aos="zoom-in" className="mt-20 text-center  ">
+                <div  className="mt-20 text-center  ">
                     <div className="flex justify-center">
                         <img className="" src={'https://i.ibb.co/GVYkfDx/Screenshot-2023-10-07-041440.png'} alt="" />
                     </div>
