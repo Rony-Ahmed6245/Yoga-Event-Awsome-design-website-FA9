@@ -101,7 +101,7 @@ console.log(count);
 - D: 4
 
 
- <h1>Ans:C -- 3</h1>
+ <h>Ans:C -- 3</h>
 <p>Explaine:
  nums is an array . this array in 4 length . this array used in forEach method to iterate through each element of the array.
 array fast element is 0 so counting value is falsy .and 1, 2, 3 it is considered truthy so increment count variable by 1 .
