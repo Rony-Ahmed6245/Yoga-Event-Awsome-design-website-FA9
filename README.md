@@ -1,8 +1,13 @@
-# Code Link : https://github.com/programming-hero-web-course-4/b8a9-event-management-Rony-Ahmed6245.git
-# Live Link : https://yoga-assignment-9.web.app/
-<div>
+<h3 align="center">---All Necessary Links---</h3>
+1. Live Link : https://yoga-assignment-9.web.app/ <br/>
+2. Code Link : https://github.com/programming-hero-web-course-4/b8a9-event-management-Rony-Ahmed6245.git 
+            <h3 align="center">---Used Technology---</h3>
+            1.React <br>
+            2.React Router dom <br>
+            3.Tailwind css & deyisUI <br>
+            4.Firebase 
+            <h3 align="center">---Project features---</h3>
             <img src="https://i.ibb.co/NrVXCg2/Screenshot-2023-10-09-224746.png" alt="" />
-            <h1>Add at least 5 Project features</h1>
             <h3>1/Feature: Website main services </h3>
             <img src="https://i.ibb.co/Kh4RDHp/services.png" alt="" />
             <p>
